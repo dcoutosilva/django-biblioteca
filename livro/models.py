@@ -9,7 +9,7 @@ class Livros(models.Model):
     isbn = models.CharField(max_length=13)
     quantidade = models.IntegerField()
     disponivel = models.BooleanField(default=True)
-    data_cadastro = models.DateField()
+    data_cadastro = models.DateField(auto_now=True)
     emprestado = models.BooleanField(default=False)
     data_emprestimo = models.DateField(blank = True)
     data_devolucao = models.DateField(blank = True)
