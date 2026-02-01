@@ -14,7 +14,7 @@ class Livros(models.Model):
     data_emprestimo = models.DateField(blank = True)
     data_devolucao = models.DateField(blank = True)
     nome_emprestimo = models.CharField(max_length=100, blank = True)
-    tempo_duracao = models.DateField(blank = True)   
+    tempo_duracao = models.DateField(blank = True, null=True)   
     #co_autor = models.CharField(max_length=100, blank = true)  # Campo opcional para co-autor 
 
 
