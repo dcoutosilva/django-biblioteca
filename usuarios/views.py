@@ -5,4 +5,4 @@ def login(request):
     return HttpResponse('login')
 
 def cadastro(request):
-    return HttpResponse('cadastro')
+    return render(request, 'cadastro.html')
