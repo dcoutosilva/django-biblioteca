@@ -5,7 +5,7 @@ from datetime import date
 class Livros(models.Model):
     nome = models.CharField(max_length=100) 
     autor = models.CharField(max_length=100)    
-    co_autor = models.CharField(max_length=100, blank = True)  # Campo opcional para co-autor                
+    co_autor = models.CharField(max_length=100, blank = True, null = True)  # Campo opcional para co-autor                
     editora = models.CharField(max_length=100)
     ano_publicacao = models.IntegerField()      
     isbn = models.CharField(max_length=13)
@@ -13,11 +13,13 @@ class Livros(models.Model):
     disponivel = models.BooleanField(default=True)
     data_cadastro = models.DateField(default = date.today)
     emprestado = models.BooleanField(default=False)
-    data_emprestimo = models.DateField(blank = True)
+    data_emprestimo = models.DateField(blank = True, null = True)
     data_devolucao = models.DateField(blank = True, null=True)
-    nome_emprestimo = models.CharField(max_length=100, blank = True)
+    nome_emprestimo = models.CharField(max_length=100, blank = True, null = True)
     tempo_duracao = models.DateField(blank = True, null=True)   
     
     class Meta:
         verbose_name = "Livro"
         
+    def __str__(self):
+        return self.nome
