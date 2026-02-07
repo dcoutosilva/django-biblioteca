@@ -1,0 +1,24 @@
+
+# Ambientes Virtuais (Venv)
+meu_ambiente/
+.venv/
+venv/
+env/
+
+# Banco de dados local (SQLite)
+db.sqlite3
+*.sqlite3
+
+# Cache do Python
+**/__pycache__/
+*.py[cod]
+*$py.class
+
+# Variáveis de ambiente / Segredos
+.env
+.secrets
+
+# IDEs e Editores
+.vscode/
+.idea/
+*.swp
